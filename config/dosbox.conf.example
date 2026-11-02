@@ -1,0 +1,16 @@
+# Minimal classic DOSBox example; not a tested Fantasy General profile.
+# Source: https://www.dosbox.com/wiki/Dosbox.conf
+# Manual: https://www.dosbox.com/DOSBoxManual.html
+# Review against your exact runtime/version; forks may use different settings.
+# Unspecified settings remain under the runtime's defaults/configuration.
+# Copy to local/dosbox/dosbox.conf before adding private paths or experiments.
+
+[sdl]
+# Start in a window (documented DOSBox default).
+fullscreen=false
+
+[render]
+# Draw every frame (documented DOSBox default).
+frameskip=0
+
+# No CPU/audio overrides, mounts, or launch commands: these require testing.

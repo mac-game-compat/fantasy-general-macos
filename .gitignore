@@ -1,0 +1,64 @@
+# Private assets and experiments, including all local subdirectories.
+/local/
+
+# Defense in depth only: keep all private assets/runtimes under /local/.
+# These patterns cannot identify arbitrary game data or extensionless binaries.
+# Review every staged path and diff; never force-add private material.
+
+# DOS/native executables, libraries, and application distributions (any case).
+*.[eE][xX][eE]
+*.[cC][oO][mM]
+*.[dD][lL][lL]
+*.[dD][yY][lL][iI][bB]
+*.[sS][oO]
+*.[aA][pP][pP]/
+*.[dD][mM][gG]
+*.[pP][kK][gG]
+
+# Archives, installers, and disc images.
+*.[zZ][iI][pP]
+*.[7][zZ]
+*.[rR][aA][rR]
+*.[cC][aA][bB]
+*.[aA][rR][jJ]
+*.[lL][hH][aA]
+*.[lL][zZ][hH]
+*.[tT][aA][rR]
+*.[gG][zZ]
+*.[bB][zZ]2
+*.[xX][zZ]
+*.[tT][gG][zZ]
+*.[iI][sS][oO]
+*.[bB][iI][nN]
+*.[cC][uU][eE]
+*.[iI][mM][gG]
+
+# Save conventions; actual game-specific filenames have not been inspected.
+*.[sS][aA][vV]
+*.[sS][aA][vV][eE]
+*.[sS][vV][0-9]
+*.[sS][vV][0-9][0-9]
+*.[gG][aA][mM]
+# Root save folders only; allow documentation such as docs/saves/README.md.
+/[sS][aA][vV][eE]/
+/[sS][aA][vV][eE][sS]/
+/[sS][aA][vV][eE][gG][aA][mM][eE]/
+
+# Secrets and local environment configuration.
+.env
+.env.*
+# Only sanitized, project-authored examples may use this exception.
+# It does not re-include anything inside the excluded /local/ directory.
+!.env.example
+*.pem
+*.key
+/secrets/
+/.aws/
+
+# macOS metadata.
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+__MACOSX/
